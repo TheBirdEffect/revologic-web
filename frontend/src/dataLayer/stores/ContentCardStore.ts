@@ -2,7 +2,7 @@ import { Instance, t } from "mobx-state-tree";
 import { ContentCard } from "../models/ContentCard";
 
 export const ContentCardStore = t.model('ContentCardStore', {
-    contentCards: t.array(ContentCard)
+    contentCards: t.map(ContentCard)
 })
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
