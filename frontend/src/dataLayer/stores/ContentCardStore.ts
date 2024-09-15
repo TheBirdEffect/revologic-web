@@ -1,5 +1,5 @@
 import { Instance, t } from "mobx-state-tree";
-import { ContentCard } from "./models/ContentCard";
+import { ContentCard } from "../models/ContentCard";
 
 export const ContentCardStore = t.model('ContentCardStore', {
     contentCards: t.array(ContentCard)
