@@ -4,6 +4,7 @@ import { theme } from "../Theme";
 
 
 export const StackLayout = styled(Wrapper)`
+  id: ${(props) => props.id};
   display: flex;
   gap: 1rem;
   padding: 10px;
