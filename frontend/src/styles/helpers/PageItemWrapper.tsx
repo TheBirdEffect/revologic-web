@@ -5,11 +5,13 @@ interface PageItemWrapperProps {
   className?: string;
   display?: string;
   flexDirection?: 'column' | 'row';
+  justifyContent?: string;
   alignItems?: string;
   maxWidth?: string;
   margin?: string;
   backgroundColor?: string;
   children?: ReactNode;
+  borderRadius?: string;
 }
 
 export const PageItemWrapper: React.FC<PageItemWrapperProps> = ({ className, children }) => {

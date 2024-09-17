@@ -1,36 +1,40 @@
-import { DefaultTheme } from 'styled-components'
+import { DefaultTheme } from "styled-components";
 
 export const theme: DefaultTheme = {
   colors: {
-    primary: '#FAFAFA',
-    secondary: '#FFC80A',
-    tertiary: '#303030',
-    background: '#ffffff',
-    text: '#000000',
-    primaryTextColor: '#594F43',
-    secondaryTextColor: '#777777',
-    inputPlaceholder: '#C7C7C7',
-    darkGrayText: '#303030',
-    darkText: '#1A1A1A',
-    black: '#000000',
-    white: '#ffffff',
-    dark: '',
-    medium: '',
-    light: '',
-    danger: '',
-    success: '#66A15A',
+    primary: "#FAFAFA",
+    secondary: "#FFC80A",
+    tertiary: "#303030",
+    backgroundRich: "#38D0A1",
+    backgroundPoor: "#8FD1C4",
+    text: "#000000",
+    primaryTextColor: "#594F43",
+    secondaryTextColor: "#777777",
+    inputPlaceholder: "#C7C7C7",
+    darkGrayText: "#303030",
+    darkText: "#1A1A1A",
+    black: "#000000",
+    white: "#ffffff",
+    dark: "",
+    medium: "",
+    light: "",
+    danger: "",
+    success: "#66A15A",
+
+    // TeaserCard
+    teaserPrimary: "#F8F8F8",
   },
   fonts: {
-    anekMalayalam: 'Anek Malayalam',
+    anekMalayalam: "Anek Malayalam",
   },
   sizes: {
-    xs: '10px',
+    xs: "10px",
   },
   paddings: {
-    container: '15px',
-    pageTop: '30px',
+    container: "15px",
+    pageTop: "30px",
   },
   margins: {
-    pageTop: '30px',
+    pageTop: "30px",
   },
-}
+};

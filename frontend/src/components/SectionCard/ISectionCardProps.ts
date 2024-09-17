@@ -1,3 +1,5 @@
 export interface ISectionCardProps {
-    id?: string;
+    headline: string;
+    readMoreLink: string;
+    children: React.ReactNode;
 }

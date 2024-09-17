@@ -1,5 +1,8 @@
+import SectionCard from "../../components/SectionCard/SectionCard";
+import TeaserCard from "../../components/TeaserCard/TeaserCard";
 import { useRootStore } from "../../context/RootStoreContext";
-import { StackLayout } from "../../styles/core/Wrappers";
+import { StackLayout } from "../../styles/core/ui/StackLayout";
+import { theme } from "../../styles/Theme";
 import { IHomeProps } from "./IHomeProps";
 
 export const Home: React.FC<IHomeProps> = () => {
@@ -10,19 +13,23 @@ export const Home: React.FC<IHomeProps> = () => {
   console.log(head);
 
   return (
-    <StackLayout>
+    <StackLayout backgroundColor={theme.colors.backgroundRich}>
       {contentStore.sections.map((section) => (
-        <StackLayout key={section.id}>
-          <h2>{section.headline}</h2>
-          {section.cards.map((card) => (
-            <StackLayout key={card.id}>
-              <h3>{card.headline}</h3>
-              { card.type === "TeaserCard" && 
-                <img src={card.descriptionImg} alt={card.headline} />
-              }
-            </StackLayout>
-          ))}
-        </StackLayout>
+        <SectionCard 
+          key={section.id} 
+          headline={section.headline} 
+          readMoreLink={section.readMoreLink!}
+          >
+            {section.cards.map((card) => 
+              card.type === "TeaserCard" && (
+                <TeaserCard 
+                  key={card.id} 
+                  descriptionImg={card.descriptionImg} 
+                  headline={card.headline} 
+                />
+              )
+            )}
+        </SectionCard>
       ))}
     </StackLayout>
   );

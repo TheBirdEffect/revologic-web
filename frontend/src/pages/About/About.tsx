@@ -1,4 +1,4 @@
-import { StackLayout } from "../../styles/core/Wrappers";
+import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { IAboutProps } from "./IAboutProps";
 
 export const About: React.FC<IAboutProps> = () => {

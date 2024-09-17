@@ -8,7 +8,8 @@ declare module 'styled-components' {
       primary: '#FAFAFA'
       secondary: '#FFC80A'
       tertiary: '#303030'
-      background: '#ffffff'
+      backgroundRich: '#38D0A1'
+      backgroundPoor: '#8FD1C4'
       text: '#000000'
       primaryTextColor: '#594F43'
       secondaryTextColor: '#777777'
@@ -22,6 +23,9 @@ declare module 'styled-components' {
       light: ''
       danger: ''
       success: '#66A15A'
+
+      // TeaserCard
+      teaserPrimary: '#F8F8F8'
     }
     sizes: {
       xs: '10px'
