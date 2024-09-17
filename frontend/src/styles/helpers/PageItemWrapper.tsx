@@ -9,6 +9,7 @@ interface PageItemWrapperProps {
   alignItems?: string;
   maxWidth?: string;
   margin?: string;
+  padding?: string;
   backgroundColor?: string;
   children?: ReactNode;
   borderRadius?: string;
