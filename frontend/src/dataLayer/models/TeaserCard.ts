@@ -1,12 +1,12 @@
 import { t, Instance } from 'mobx-state-tree';
 
-export const Card = t.model({
+export const TeaserCard = t.model({
     id: t.identifier,
     descriptionImg: t.string,
     headline: t.string,
     descriptor: t.maybeNull(t.string),
     destLink: t.string,
-    type: t.literal('Card')
+    type: t.literal('TeaserCard')
 })
     .actions(self => ({
         getCard() {
@@ -21,4 +21,4 @@ export const Card = t.model({
     }));
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export interface ICardStore extends Instance<typeof Card> { };
+export interface ITeaserCard extends Instance<typeof TeaserCard> { };

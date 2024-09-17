@@ -13,7 +13,7 @@ const useContext = RootStore.create(
         ...section,
         cards: section.cards.map(card => ({
           ...card,
-          type: "Card"
+          type: "TeaserCard"
         }))
       }))
     }

@@ -6,14 +6,14 @@ export const demoLandingData = {
       readMoreLink: "/services",
       cards: [
         {
-          type: "Card",
+          type: "TeaserCard",
           id: "1",
           headline: "Software Engineering",
           destLink: "self",
           descriptionImg: "img/software_engineering.png",
         },
         {
-          type: "Card",
+          type: "TeaserCard",
           id: "2",
           headline: "Consulting",
           destLink: "self",

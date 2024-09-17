@@ -11,14 +11,13 @@ export const Home: React.FC<IHomeProps> = () => {
 
   return (
     <StackLayout>
-      <h1>Home</h1>
       {contentStore.sections.map((section) => (
         <StackLayout key={section.id}>
           <h2>{section.headline}</h2>
           {section.cards.map((card) => (
             <StackLayout key={card.id}>
               <h3>{card.headline}</h3>
-              { card.type === "Card" && 
+              { card.type === "TeaserCard" && 
                 <img src={card.descriptionImg} alt={card.headline} />
               }
             </StackLayout>
