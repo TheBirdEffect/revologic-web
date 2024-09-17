@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 interface PageItemWrapperProps {
   id?: string;
   className?: string;
+  width?: string;
   display?: string;
   flexDirection?: 'column' | 'row';
   justifyContent?: string;

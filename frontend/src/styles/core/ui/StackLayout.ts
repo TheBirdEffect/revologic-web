@@ -7,6 +7,7 @@ export const StackLayout = styled(Wrapper)`
   id: ${(props) => props.id};
   display: flex;
   gap: 1rem;
+  width: ${(props) => props.width || "100%"};
   margin: ${(props) => props.margin || "0"};
   padding: ${(props) => props.padding || "10px"};
   align-items: ${(props) => props.alignItems || "center"};
