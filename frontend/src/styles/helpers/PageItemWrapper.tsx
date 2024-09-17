@@ -1,6 +1,7 @@
 import React, { ReactNode } from "react";
 
 interface PageItemWrapperProps {
+  id?: string;
   className?: string;
   display?: string;
   flexDirection?: 'column' | 'row';
