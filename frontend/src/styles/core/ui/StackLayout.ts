@@ -1,6 +1,7 @@
 import styled from "styled-components";
 import { PageItemWrapper as Wrapper } from "../../helpers/PageItemWrapper";
 import { device } from "../../BreakPoints";
+import { theme } from "../../Theme";
 
 
 export const StackLayout = styled(Wrapper)`
