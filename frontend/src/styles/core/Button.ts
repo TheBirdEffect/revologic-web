@@ -10,7 +10,7 @@ export const Button = styled.button`
     
     @media ${device.xs} {
         width: 220px !important;
-        height: 65px !important;
+        height: 55px !important;
         margin: 10px !important;
     }
 
