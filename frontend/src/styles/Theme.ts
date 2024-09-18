@@ -23,6 +23,9 @@ export const theme: DefaultTheme = {
 
     // TeaserCard
     teaserPrimary: "#F8F8F8",
+
+    // Button
+    buttonPrimary: "#8FD1C4",
   },
   fonts: {
     anekMalayalam: "Anek Malayalam",
