@@ -1,6 +1,7 @@
 import { useCallback } from "react";
 import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { ISectionCardProps } from "./ISectionCardProps";
+import { Button } from "../../styles/core/Button";
 
 const SectionCard: React.FC<ISectionCardProps> = ({
   headline,
@@ -18,9 +19,9 @@ const SectionCard: React.FC<ISectionCardProps> = ({
       </div>
 
       {children}
-      <button role="button" onClick={handleReadMore}>
+      <Button role="button" onClick={handleReadMore}>
         Read More
-      </button>
+      </Button>
     </StackLayout>
   );
 };
