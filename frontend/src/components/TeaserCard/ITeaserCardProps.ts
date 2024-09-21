@@ -3,4 +3,5 @@ export interface ITeaserCardProps {
     descriptionImg: string;
     headline: string;
     descriptor?: string;
+    hasRoundImage?: boolean;
 }
