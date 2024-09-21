@@ -1,16 +1,6 @@
 import styled from "styled-components";
 import { CustomImage } from "../helpers/Image";
 
-// export const Image = styled.img`
-//     width: 100%;
-//     height: 300px;
-//     padding: 10px;
-//     border-radius: ${(props) => props. ? '50%' : '0'};
-//     object-fit: cover;
-//     src: ${(props) => props.src};
-//     alt: ${(props) => props.alt};
-// `;
-
 export const Image = styled(CustomImage)`
     width: 100%;
     height: 300px;
@@ -27,6 +17,15 @@ export const RoundImage = styled(CustomImage)`
     padding: 10px;
     border-radius: 50%;
     object-fit: cover;
+    src: ${(props) => props.src};
+    alt: ${(props) => props.alt};
+`
+
+export const ProfileImage = styled(CustomImage)`
+    width: 200px;
+    height: 300px;
+    padding: 10px;
+    object-fit: scale-down;
     src: ${(props) => props.src};
     alt: ${(props) => props.alt};
 `
