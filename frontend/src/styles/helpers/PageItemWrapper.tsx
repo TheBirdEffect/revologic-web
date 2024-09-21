@@ -10,10 +10,12 @@ interface PageItemWrapperProps {
   alignItems?: string;
   maxWidth?: string;
   margin?: string;
+  marginTop?: string;
+  marginBottom?: string;
   padding?: string;
   backgroundColor?: string;
   children?: ReactNode;
-  borderRadius?: string;
+  borderRadius?: string | boolean;
 }
 
 export const PageItemWrapper: React.FC<PageItemWrapperProps> = ({ className, children }) => {
