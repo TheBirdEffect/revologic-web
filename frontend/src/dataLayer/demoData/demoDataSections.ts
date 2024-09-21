@@ -53,7 +53,7 @@ export const demoLandingData = {
       cards: [
         {
           type: "ProfileContentCard",
-          id: "1",
+          id: "5",
           profileImg: "/img/profile1.png",
           imgAlt: "Profile Picture Christoph Frischmuth",
           name: "Christoph Frischmuth",
