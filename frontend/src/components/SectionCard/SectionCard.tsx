@@ -2,7 +2,7 @@ import { useCallback } from "react";
 import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { ISectionCardProps } from "./ISectionCardProps";
 import { Button } from "../../styles/core/Button";
-import { Overline } from "../../styles/core/Overline";
+import { Overline } from "../../styles/core/Headings";
 import { SectionHeadlineWrapper } from "../../styles/core/ui/TextLayout";
 
 const SectionCard: React.FC<ISectionCardProps> = ({

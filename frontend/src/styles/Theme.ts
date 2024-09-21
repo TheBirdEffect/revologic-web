@@ -23,6 +23,7 @@ export const theme: DefaultTheme = {
 
     // TeaserCard
     teaserPrimary: "#F8F8F8",
+    descriptorPrimary: "#7E7E7E",
 
     // Button
     buttonPrimary: "#8FD1C4",
