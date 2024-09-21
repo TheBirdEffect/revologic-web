@@ -21,5 +21,30 @@ export const demoLandingData = {
         },
       ],
     },
+    {
+      id: "projects",
+      headline: "Projects",
+      readMoreLink: "/projects",
+      cards: [
+        {
+          type: "TeaserCard",
+          id: "3",
+          headline: "Project 1",
+          destLink: "self",
+          descriptionImg: "/img/automotive.png",
+          descriptor: "Automotive",
+          isRoundImage: true,
+        },
+        {
+          type: "TeaserCard",
+          id: "4",
+          headline: "Project 2",
+          destLink: "self",
+          descriptionImg: "/img/aviation.png",
+          descriptor: "Aviation",
+          isRoundImage: true,
+        },
+      ],
+    },
   ],
 };
