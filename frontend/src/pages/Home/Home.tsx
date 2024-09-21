@@ -8,9 +8,6 @@ import { IHomeProps } from "./IHomeProps";
 export const Home: React.FC<IHomeProps> = () => {
   const { contentStore } = useRootStore();
 
-  const head = contentStore.getSection("services")?.headline;
-
-  console.log(head);
 
   return (
     <StackLayout backgroundColor={theme.colors.backgroundRich}>
@@ -22,10 +19,12 @@ export const Home: React.FC<IHomeProps> = () => {
           >
             {section.cards.map((card) => 
               card.type === "TeaserCard" && (
-                <TeaserCard 
+                <TeaserCard
                   key={card.id} 
                   descriptionImg={card.descriptionImg} 
-                  headline={card.headline} 
+                  headline={card.headline}
+                  hasRoundImage={card.isRoundImage} 
+                  descriptor={card.descriptor || undefined}
                 />
               )
             )}

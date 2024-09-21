@@ -16,9 +16,9 @@ const SectionCard: React.FC<ISectionCardProps> = ({
 
   return (
     <StackLayout 
-    backgroundColor={"rgb(248, 248, 248, 0.7)"} 
-    margin={'50px 0px'} 
+    backgroundColor={"rgb(248, 248, 248, 0.7)"}
     borderRadius
+    marginTop="50px"
     >
       <SectionHeadlineWrapper>
         <Overline>{headline}</Overline>
