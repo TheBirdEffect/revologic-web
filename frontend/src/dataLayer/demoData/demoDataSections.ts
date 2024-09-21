@@ -46,5 +46,23 @@ export const demoLandingData = {
         },
       ],
     },
+    {
+      id: "about",
+      headline: "About",
+      readMoreLink: "/about",
+      cards: [
+        {
+          type: "ProfileContentCard",
+          id: "1",
+          profileImg: "/img/profile1.png",
+          imgAlt: "Profile Picture Christoph Frischmuth",
+          name: "Christoph Frischmuth",
+          degree: "B.Sc. Applied Computer Science",
+          position: "Freelancer - Software Engineer",
+          offers: ["Web Development", "Consulting", "Software Design"],
+          interests: ["All kinds of technology", "Automation", "Aviation"],
+        },
+      ],
+    },
   ],
 };
