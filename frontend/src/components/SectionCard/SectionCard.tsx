@@ -6,12 +6,11 @@ import { Overline } from "../../styles/core/Headings";
 import { SectionHeadlineWrapper } from "../../styles/core/ui/TextLayout";
 
 const SectionCard: React.FC<ISectionCardProps> = ({
-  headline,
-  readMoreLink,
+  data,
   children,
 }) => {
   const handleReadMore = useCallback(() => {
-    console.log(readMoreLink + "Clicked");
+    console.log(data.readMoreLink + "Clicked");
   }, []);
 
   return (
@@ -21,7 +20,7 @@ const SectionCard: React.FC<ISectionCardProps> = ({
     marginTop="50px"
     >
       <SectionHeadlineWrapper>
-        <Overline>{headline}</Overline>
+        <Overline>{data.headline}</Overline>
       </SectionHeadlineWrapper>
       {children}
       <Button role="button" onClick={handleReadMore}>

@@ -4,31 +4,29 @@ import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { Image, RoundImage } from "../../styles/core/Image";
 import { theme } from "../../styles/Theme";
 import { CardDescriptor, CardHeadLine } from "../../styles/core/Headings";
-import { TeaserCard as TeaserCardModel } from "../../dataLayer/models/Card/TeaserCard";
 
 const TeaserCard: React.FC<ITeaserCardProps> = ({
-    descriptionImg, 
-    headline, 
-    hasRoundImage,
-    descriptor
+    // descriptionImg, 
+    // headline, 
+    // hasRoundImage,
+    // descriptor
+    data
 }) => {
-
-    const {  }
 
     return (
         <StackLayout 
         backgroundColor={theme.colors.teaserPrimary}
         borderRadius
         >
-            {hasRoundImage ? (
-                <RoundImage src={descriptionImg} alt={headline}/>
+            {data.isRoundImage ? (
+                <RoundImage src={data.descriptionImg} alt={data.imgAlt}/>
             ) : (
-                <Image src={descriptionImg} alt={headline}/>
+                <Image src={data.descriptionImg} alt={data.headline}/>
             )}
             <StackLayout id="Footer">
-            <CardHeadLine>{headline}</CardHeadLine>
-            {descriptor && 
-            <CardDescriptor>{descriptor}</CardDescriptor>
+            <CardHeadLine>{data.headline}</CardHeadLine>
+            {data.descriptor && 
+            <CardDescriptor>{data.descriptor}</CardDescriptor>
             }
             </StackLayout>
         </StackLayout>
