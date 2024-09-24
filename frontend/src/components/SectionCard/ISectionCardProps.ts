@@ -1,5 +1,6 @@
+import { ISectionModel } from "../../dataLayer/models/Section";
+
 export interface ISectionCardProps {
-    headline: string;
-    readMoreLink: string;
+    data: ISectionModel;
     children: React.ReactNode;
 }
