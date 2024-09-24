@@ -10,4 +10,5 @@ export const Section = t.model({
 });
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export interface ISection extends Instance<typeof Section> { };
+// export interface ISection extends Instance<typeof Section> { };
+export type ISectionModel = Instance<typeof Section>;

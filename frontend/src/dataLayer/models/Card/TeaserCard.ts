@@ -35,4 +35,5 @@ export const TeaserCardModel = CardBase.named('TeaserCard').props({
 });
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export interface ITeaserCard extends Instance<typeof TeaserCardModel> { };
+// export interface ITeaserCard extends Instance<typeof TeaserCardModel> { };
+export type ITeaserCardModel = Instance<typeof TeaserCardModel>;
