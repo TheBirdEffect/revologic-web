@@ -1,11 +1,12 @@
 import { Instance, t } from 'mobx-state-tree';
-import { UnionCard } from '../types/UnionCard';
+import { CardBase } from './Card/CardBase';
+// import { UnionCard } from '../types/UnionCard';
 
 export const Section = t.model({
     id: t.identifier,
     headline: t.string,
     readMoreLink: t.maybeNull(t.string),
-    cards: t.array(UnionCard)
+    cards: t.array(t.reference(CardBase))
 });
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type

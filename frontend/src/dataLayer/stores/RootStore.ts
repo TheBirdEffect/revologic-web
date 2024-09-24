@@ -1,8 +1,8 @@
 import { t, Instance } from 'mobx-state-tree'
-import { contentStore } from './SectionStore'
+import { ContentStore } from './ContentStore'
 
 export const RootStore = t.model('RootStore', {
-    contentStore: t.optional(contentStore, {})
+    contentStore: t.optional(ContentStore, {})
 })
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type

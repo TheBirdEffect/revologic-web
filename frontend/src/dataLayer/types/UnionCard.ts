@@ -1,7 +1,7 @@
 import { t } from "mobx-state-tree";
-import { TeaserCard } from "../models/TeaserCard";
-import { ContentCard } from "../models/ContentCard";
-import { ProfileContentCard } from "../models/ProfileContentCard";
+import { TeaserCard } from "../models/Card/TeaserCard";
+import { ContentCard } from "../models/Card/ContentCard";
+import { ProfileContentCard } from "../models/Card/ProfileContentCard";
 
 export const UnionCard = t.union({
     dispatcher: (snapshot) => {

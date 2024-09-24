@@ -4,6 +4,7 @@ import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { Image, RoundImage } from "../../styles/core/Image";
 import { theme } from "../../styles/Theme";
 import { CardDescriptor, CardHeadLine } from "../../styles/core/Headings";
+import { TeaserCard as TeaserCardModel } from "../../dataLayer/models/Card/TeaserCard";
 
 const TeaserCard: React.FC<ITeaserCardProps> = ({
     descriptionImg, 
@@ -11,6 +12,8 @@ const TeaserCard: React.FC<ITeaserCardProps> = ({
     hasRoundImage,
     descriptor
 }) => {
+
+    const {  }
 
     return (
         <StackLayout 
