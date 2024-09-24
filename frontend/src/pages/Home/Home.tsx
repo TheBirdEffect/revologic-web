@@ -10,6 +10,20 @@ export const Home: React.FC<IHomeProps> = () => {
 
 
   return (
+    <StackLayout backgroundColor={theme.colors.backgroundRich}>
+      {contentStore.sections.map((section) => (
+        <SectionCard 
+          key={section.id}
+          data={section}
+          >
+            {section.cards.map((card) => 
+              card.type === "TeaserCard" ? (
+                <TeaserCard data={card} key={card.id} />
+              ) : null
+            )}
+        </SectionCard>
+      ))}
+    </StackLayout>
     // <StackLayout backgroundColor={theme.colors.backgroundRich}>
     //   {contentStore.sections.map((section) => (
     //     <SectionCard 
@@ -17,30 +31,9 @@ export const Home: React.FC<IHomeProps> = () => {
     //       headline={section.headline} 
     //       readMoreLink={section.readMoreLink!}
     //       >
-    //         {section.cards.map((card) => 
-    //           card.type === "TeaserCard" && (
-    //             <TeaserCard
-    //               key={card.id} 
-    //               descriptionImg={card.descriptionImg} 
-    //               headline={card.headline}
-    //               hasRoundImage={card.isRoundImage} 
-    //               descriptor={card.descriptor || undefined}
-    //             />
-    //           )
-    //         )}
+    //         <></>
     //     </SectionCard>
     //   ))}
     // </StackLayout>
-    <StackLayout backgroundColor={theme.colors.backgroundRich}>
-      {contentStore.sections.map((section) => (
-        <SectionCard 
-          key={section.id} 
-          headline={section.headline} 
-          readMoreLink={section.readMoreLink!}
-          >
-            <></>
-        </SectionCard>
-      ))}
-    </StackLayout>
   );
 };
