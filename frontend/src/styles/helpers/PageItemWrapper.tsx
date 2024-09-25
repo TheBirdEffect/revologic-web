@@ -16,12 +16,18 @@ interface PageItemWrapperProps {
   backgroundColor?: string;
   children?: ReactNode;
   borderRadius?: string | boolean;
+  onClick?: () => void;
 }
 
-export const PageItemWrapper: React.FC<PageItemWrapperProps> = ({ className, children }) => {
+export const PageItemWrapper: React.FC<PageItemWrapperProps> = (
+  { 
+    className,
+    onClick,
+    children 
+  }) => {
   return (
     <>
-      <div className={className}>{children}</div>
+      <div className={className} onClick={onClick}>{children}</div>
     </>
   );
 };

@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback } from "react";
 import { IProfileContentCardProps } from "./IProfileContentCardProps";
 import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { theme } from "../../styles/Theme";
@@ -9,9 +9,13 @@ import { observer } from "mobx-react-lite";
 export const ProfileContentCard: React.FC<IProfileContentCardProps> = ({
   data,
 }) => {
+  const handleClick = useCallback(() => {
+    console.log("Clicked on: ", data.target);
+}, [data.target]);
+
   
   return (
-    <StackLayout backgroundColor={theme.colors.teaserPrimary} borderRadius>
+    <StackLayout backgroundColor={theme.colors.teaserPrimary} borderRadius onClick={handleClick}>
       <ProfileImage src={data.profileImg} alt={data.imgAlt} />
       <StackLayout id="Header">
         <Text bold>{data.name}</Text>
