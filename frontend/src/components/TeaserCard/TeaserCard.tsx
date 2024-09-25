@@ -6,10 +6,6 @@ import { theme } from "../../styles/Theme";
 import { CardDescriptor, CardHeadLine } from "../../styles/core/Headings";
 
 const TeaserCard: React.FC<ITeaserCardProps> = ({
-    // descriptionImg, 
-    // headline, 
-    // hasRoundImage,
-    // descriptor
     data
 }) => {
 

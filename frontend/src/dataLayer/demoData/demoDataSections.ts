@@ -91,29 +91,10 @@ export const newDemo = {
   ],
 }
 
-// Definiere den Literal-Typ für das `type`-Feld
-type CardType = "TeaserCard" | "ProfileContentCard" | "ContentCard";
-
-// Definiere die Struktur deiner Karten
-interface ICard {
-  id: string;
-  target: string;
-  type: CardType; // Das `type`-Feld ist streng auf bestimmte Werte beschränkt
-  headline?: string;
-  descriptionImg?: string;
-  profileImg?: string;
-  isRoundImage?: boolean;
-  imgAlt?: string;
-  descriptor?: string;
-  name?: string;
-  degree?: string;
-  position?: string;
-  offers?: string[];
-  interests?: string[];
-}
 
 
-export const newCards: ICard[] = [
+
+export const newCards = [
     {
       type: 'TeaserCard',
       id: "1",

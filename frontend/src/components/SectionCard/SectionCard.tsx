@@ -4,8 +4,9 @@ import { ISectionCardProps } from "./ISectionCardProps";
 import { Button } from "../../styles/core/Button";
 import { Overline } from "../../styles/core/Headings";
 import { SectionHeadlineWrapper } from "../../styles/core/ui/TextLayout";
+import { observer } from "mobx-react-lite";
 
-const SectionCard: React.FC<ISectionCardProps> = ({
+export const SectionCard: React.FC<ISectionCardProps> = ({
   data,
   children,
 }) => {
@@ -30,4 +31,4 @@ const SectionCard: React.FC<ISectionCardProps> = ({
   );
 };
 
-export default SectionCard;
+export default observer(SectionCard);
