@@ -1,11 +1,13 @@
 import { t, Instance } from 'mobx-state-tree';
 import { Section } from '../models/Section'; // Fix the import path
-import { CardBase } from '../models/Card/CardBase';
-import { newDemo } from '../demoData/demoDataSections';
+import { newCards, newDemo } from '../demoData/demoDataSections';
+import { TeaserCardModel } from '../models/Card/TeaserCard';
+import { ProfileContentCardModel } from '../models/Card/ProfileContentCard';
+import { ContentCardModel } from '../models/Card/ContentCard';
 
 export const ContentStore = t.model('SectionStore', {
     sections: t.array(Section),
-    cards: t.array(CardBase)
+    cards: t.optional(t.array(t.union(TeaserCardModel, ProfileContentCardModel, ContentCardModel)), [])
 }).views(self => ({
     getSection(id: string) {
         return self.sections.find(section => section.id === id);
@@ -15,23 +17,7 @@ export const ContentStore = t.model('SectionStore', {
 ContentStore.create({
     sections: newDemo.sections,
     // cards: newDemo.cards
-    cards: [
-        {
-            id: '1',
-            target: 'https://www.google.com',
-            type: 'TeaserCard'
-        },
-        {
-            id: '2',
-            target: 'https://www.google.com',
-            type: 'ProfileContentCard'
-        },
-        {
-            id: '3',
-            target: 'https://www.google.com',
-            type: 'ContentCard'
-        }
-    ]
+    cards: newCards
 });
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
