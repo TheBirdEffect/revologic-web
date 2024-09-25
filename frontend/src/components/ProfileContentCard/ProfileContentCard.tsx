@@ -10,7 +10,7 @@ export const ProfileContentCard: React.FC<IProfileContentCardProps> = ({
   data,
 }) => {
   const handleClick = useCallback(() => {
-    console.log("Clicked on: ", data.target);
+    console.log(data.target);
 }, [data.target]);
 
   
