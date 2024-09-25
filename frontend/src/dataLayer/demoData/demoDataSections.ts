@@ -66,4 +66,14 @@ export const newCards = [
       offers: ["Web Development", "Consulting", "Software Design"],
       interests: ["All kinds of technology", "Automation", "Aviation"],
     },
+    {
+      type: 'ContentCard',
+      id: "6",
+      target: "/about/technologies",
+      headline: "Technologies",
+      content: "Um flexibel und präzise auf Ihre Anforderungen eingehen zu können, setzen ich auf eine breite Palette moderner Technologien:",
+      images: ["1", "2", "3"],
+      
+    }
   ]
+
