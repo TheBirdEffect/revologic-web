@@ -15,3 +15,8 @@ export const CardDescriptor = styled.h4`
     font-weight: 600;
     color: ${theme.colors.descriptorPrimary};
 `
+
+export const ContentCardHeadline = styled.h2`
+    font-weight: 700;
+    color: ${theme.colors.black};
+`
