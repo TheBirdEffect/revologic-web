@@ -1,6 +1,8 @@
+import { observer } from "mobx-react-lite";
 import SectionCard from "../../components/SectionCard/SectionCard";
 import TeaserCard from "../../components/TeaserCard/TeaserCard";
 import { useRootStore } from "../../context/RootStoreContext";
+import { ITeaserCardModel } from "../../dataLayer/models/Card/TeaserCard";
 import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { theme } from "../../styles/Theme";
 import { IHomeProps } from "./IHomeProps";
@@ -8,6 +10,8 @@ import { IHomeProps } from "./IHomeProps";
 export const Home: React.FC<IHomeProps> = () => {
   const { contentStore } = useRootStore();
 
+  console.log(contentStore.sections);
+  
 
   return (
     <StackLayout backgroundColor={theme.colors.backgroundRich}>
@@ -18,7 +22,8 @@ export const Home: React.FC<IHomeProps> = () => {
           >
             {section.cards.map((card) => 
               card.type === "TeaserCard" ? (
-                <TeaserCard data={card} key={card.id} />
+                console.log(section.cards),
+                <TeaserCard data={card as ITeaserCardModel} key={card.id} />
               ) : null
             )}
         </SectionCard>
@@ -36,4 +41,7 @@ export const Home: React.FC<IHomeProps> = () => {
     //   ))}
     // </StackLayout>
   );
+
 };
+
+export default observer(Home);

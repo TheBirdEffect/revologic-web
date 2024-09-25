@@ -5,6 +5,8 @@ export const RootStore = t.model('RootStore', {
     contentStore: t.optional(ContentStore, {})
 })
 
+ContentStore.create()
+
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type
 export interface IRootStore extends Instance<typeof RootStore> { }
 

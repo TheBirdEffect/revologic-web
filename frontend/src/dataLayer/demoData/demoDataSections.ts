@@ -1,3 +1,4 @@
+
 export const demoLandingData = {
   sections: [
     {
@@ -6,14 +7,14 @@ export const demoLandingData = {
       readMoreLink: "/services",
       cards: [
         {
-          type: "TeaserCard",
+          type: 'TeaserCard',
           id: "1",
           headline: "Software Engineering",
           destLink: "self",
           descriptionImg: "img/software_engineering.png",
         },
         {
-          type: "TeaserCard",
+          type: 'TeaserCard',
           id: "2",
           headline: "Consulting",
           destLink: "self",
@@ -27,7 +28,7 @@ export const demoLandingData = {
       readMoreLink: "/projects",
       cards: [
         {
-          type: "TeaserCard",
+          type: 'TeaserCard',
           id: "3",
           headline: "Project 1",
           destLink: "self",
@@ -36,7 +37,7 @@ export const demoLandingData = {
           isRoundImage: true,
         },
         {
-          type: "TeaserCard",
+          type: 'TeaserCard',
           id: "4",
           headline: "Project 2",
           destLink: "self",
@@ -52,7 +53,7 @@ export const demoLandingData = {
       readMoreLink: "/about",
       cards: [
         {
-          type: "ProfileContentCard",
+          type: 'ProfileContentCard',
           id: "5",
           profileImg: "/img/profile1.png",
           imgAlt: "Profile Picture Christoph Frischmuth",
@@ -88,24 +89,47 @@ export const newDemo = {
       cards: ["5"],
     },
   ],
+}
 
-  cards: [
+// Definiere den Literal-Typ für das `type`-Feld
+type CardType = "TeaserCard" | "ProfileContentCard" | "ContentCard";
+
+// Definiere die Struktur deiner Karten
+interface ICard {
+  id: string;
+  target: string;
+  type: CardType; // Das `type`-Feld ist streng auf bestimmte Werte beschränkt
+  headline?: string;
+  descriptionImg?: string;
+  profileImg?: string;
+  isRoundImage?: boolean;
+  imgAlt?: string;
+  descriptor?: string;
+  name?: string;
+  degree?: string;
+  position?: string;
+  offers?: string[];
+  interests?: string[];
+}
+
+
+export const newCards: ICard[] = [
     {
-      type: "TeaserCard",
+      type: 'TeaserCard',
       id: "1",
       headline: "Software Engineering",
       target: "self",
       descriptionImg: "img/software_engineering.png",
     },
     {
-      type: "TeaserCard",
+      type: 'TeaserCard',
       id: "2",
       headline: "Consulting",
       target: "self",
       descriptionImg: "/img/consulting.png",
     },
     {
-      type: "TeaserCard",
+      type: 'TeaserCard',
       id: "3",
       headline: "Project 1",
       target: "self",
@@ -114,7 +138,7 @@ export const newDemo = {
       isRoundImage: true,
     },
     {
-      type: "TeaserCard",
+      type: 'TeaserCard',
       id: "4",
       headline: "Project 2",
       target: "self",
@@ -123,7 +147,7 @@ export const newDemo = {
       isRoundImage: true,
     },
     {
-      type: "ProfileContentCard",
+      type: 'ProfileContentCard',
       id: "5",
       target: "self",
       profileImg: "/img/profile1.png",
@@ -134,5 +158,4 @@ export const newDemo = {
       offers: ["Web Development", "Consulting", "Software Design"],
       interests: ["All kinds of technology", "Automation", "Aviation"],
     },
-  ],
-};
+  ]

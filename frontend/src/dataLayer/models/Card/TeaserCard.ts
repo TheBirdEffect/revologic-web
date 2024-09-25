@@ -28,7 +28,7 @@ import { CardBase } from './CardBase';
 export const TeaserCardModel = CardBase.named('TeaserCard').props({
     descriptionImg: t.string,
     imgAlt: t.optional(t.string, ''),
-    headline: t.string,
+    headline: t.optional(t.string, ''),
     descriptor: t.maybeNull(t.string),
     type: t.literal('TeaserCard'),
     isRoundImage: t.optional(t.boolean, false),

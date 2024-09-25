@@ -14,7 +14,24 @@ export const ContentStore = t.model('SectionStore', {
 
 ContentStore.create({
     sections: newDemo.sections,
-    cards: newDemo.cards
+    // cards: newDemo.cards
+    cards: [
+        {
+            id: '1',
+            target: 'https://www.google.com',
+            type: 'TeaserCard'
+        },
+        {
+            id: '2',
+            target: 'https://www.google.com',
+            type: 'ProfileContentCard'
+        },
+        {
+            id: '3',
+            target: 'https://www.google.com',
+            type: 'ContentCard'
+        }
+    ]
 });
 
 // eslint-disable-next-line @typescript-eslint/no-empty-object-type

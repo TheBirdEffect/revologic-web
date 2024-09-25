@@ -27,7 +27,7 @@ import { CardBase } from "./CardBase";
 // }));
 
 export const ProfileContentCardModel = CardBase.named('ProfileContentCard').props({
-    profileImg: t.string,
+    profileImg: t.maybe(t.string),
     imgAlt: t.optional(t.string, ''),
     name: t.string,
     degree: t.string,
