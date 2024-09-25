@@ -16,7 +16,7 @@ export const SectionCard: React.FC<ISectionCardProps> = ({
 
   return (
     <StackLayout 
-    backgroundColor={"rgb(248, 248, 248, 0.7)"}
+    backgroundColor={"rgb(248, 248, 248, 0.7)"} //TODO: add this color to theme standard colors
     borderRadius
     marginTop="50px"
     >

@@ -9,6 +9,8 @@ import { IHomeProps } from "./IHomeProps";
 import { ISectionModel } from "../../dataLayer/models/Section";
 import { ProfileContentCard } from "../../components/ProfileContentCard/ProfileContentCard";
 import { IProfileContentCardModel } from "../../dataLayer/models/Card/ProfileContentCard";
+import ContentCard from "../../components/ContentCard/ContentCard";
+import { IContentCardModel } from "../../dataLayer/models/Card/ContentCard";
 
 export const Home: React.FC<IHomeProps> = () => {
   const { contentStore } = useRootStore();
@@ -24,6 +26,8 @@ export const Home: React.FC<IHomeProps> = () => {
                 data={card as IProfileContentCardModel}
                 key={card.id}
               />
+            ) : card.isContentCard() ? (
+              <ContentCard data={card as IContentCardModel} key={card.id} />
             ) : null
           )}
         </SectionCard>

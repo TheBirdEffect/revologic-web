@@ -5,13 +5,12 @@ import { ContentCardHeadline } from "../../styles/core/Headings";
 import { Text } from "../../styles/Text";
 
 export const ContentCard: React.FC<IContentCardProps> = ({ data }) => {
-    return(
-        <StackLayout>
-            <ContentCardHeadline>{data.headline}</ContentCardHeadline>
-            <Text>{data.content}</Text>
-            
-        </StackLayout>
-    )
-}
+  return (
+    <StackLayout borderRadius backgroundColor={"rgb(248, 248, 248, 0.7)"}>
+      <ContentCardHeadline>{data.headline}</ContentCardHeadline>
+      <Text align="center">{data.content}</Text>
+    </StackLayout>
+  );
+};
 
 export default observer(ContentCard);

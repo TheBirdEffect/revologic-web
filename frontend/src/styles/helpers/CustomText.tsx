@@ -6,6 +6,7 @@ interface ITextProps {
     bold?: boolean;
     italic?: boolean;
     className?: string;
+    align?: "left" | "right" | "center";
     children?: React.ReactNode;
 }
 
