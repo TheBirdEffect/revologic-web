@@ -16,7 +16,7 @@ export const newDemo = {
       id: "about",
       headline: "About",
       readMoreLink: "/about",
-      cards: ["5"],
+      cards: ["5" , "6"],
     },
   ],
 }
