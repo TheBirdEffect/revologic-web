@@ -17,6 +17,7 @@ interface PageItemWrapperProps {
   children?: ReactNode;
   borderRadius?: string | boolean;
   onClick?: () => void;
+  wrap?: string | boolean;
 }
 
 export const PageItemWrapper: React.FC<PageItemWrapperProps> = (
