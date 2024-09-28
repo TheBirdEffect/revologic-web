@@ -3,56 +3,31 @@ import { ImageModel } from "../models/ui/Image";
 import { GalleryModel } from "../models/ui/GalleryModel";
 
 export const ImageStore = t.model('ImageStore', {
-    images: t.map(ImageModel),
-    galleryModel: t.maybeNull(GalleryModel)
+    images: t.array(ImageModel),
+    galleryModel: t.maybeNull((GalleryModel))
 }).actions(self => ({
     addImage(image: Instance<typeof ImageModel>) {
-        self.images.set(image.id, image);
+        self.images.push(image);
     },
     loadImages() {
         // Logik zum Laden von Bildern, z.B. aus einer API
     }
 })).views(self => ({
     getImageById(id: string) {
-        return self.images.get(id);
+        return self.images.find(image => image.id === id)
     },
-    getImagesByGallery() {
-        if(self.galleryModel) {
-            return self.galleryModel.imageIds.map(imageId => self.images.get(imageId));
+    getAllImages() {
+        return self.images;
+    },
+    getImagesByGallery(modelId: string) {
+        const gallery = self.galleryModel;
+        console.log(gallery);
+        if (gallery && gallery.id === modelId) {
+            return gallery.imageIds.map(imageId => self.images.find(image => image.id === imageId)).filter(image => image !== undefined);
         }
+        return [];
     }
 }));
 
-ImageStore.create({});
-
-ImageModel.create({
-    id: '1',
-    url: "/img/tech/html.png",
-    alt: "HTML Logo"
-});
-
-ImageModel.create({
-    id: '2',
-    url: "/img/tech/react.png",
-    alt: "React Logo"
-});
-
-ImageModel.create({
-    id: '3',
-    url: "/img/tech/csharp.png",
-    alt: "JavaScript Logo"
-});
-
-ImageModel.create({
-    id: '4',
-    url: "/img/tech/typescript.png",
-    alt: "Typescript Logo"
-});
-
-ImageModel.create({
-    id: '5',
-    url: "/img/tech/netcore.png",
-    alt: "Node.js Logo"
-});
 
 export type IImageStore = Instance<typeof ImageStore>;
