@@ -24,8 +24,10 @@ declare module 'styled-components' {
       danger: ''
       success: '#66A15A'
 
+      // Card
+      cardPrimary: '#F8F8F8'
+
       // TeaserCard
-      teaserPrimary: '#F8F8F8'
       descriptorPrimary: '#7E7E7E'
 
       // Button
