@@ -21,7 +21,6 @@ export const ImageStore = t.model('ImageStore', {
     },
     getImagesByGallery(modelId: string) {
         const gallery = self.galleryModel;
-        console.log(gallery);
         if (gallery && gallery.id === modelId) {
             return gallery.imageIds.map(imageId => self.images.find(image => image.id === imageId)).filter(image => image !== undefined);
         }
