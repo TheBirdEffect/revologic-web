@@ -29,3 +29,7 @@ export const ProfileImage = styled(CustomImage)`
     src: ${(props) => props.src};
     alt: ${(props) => props.alt};
 `
+export const GalleryImage = styled(CustomImage)`
+    width: 110px;
+    height: auto;
+`
