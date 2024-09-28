@@ -4,11 +4,12 @@ import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { ContentCardHeadline } from "../../styles/core/Headings";
 import { Text } from "../../styles/Text";
 import Gallery from "../ui/Galery/Gallery";
+import { theme } from "../../styles/Theme";
 
 export const ContentCard: React.FC<IContentCardProps> = ({ data }) => {
 
   return (
-    <StackLayout borderRadius backgroundColor={"rgb(248, 248, 248, 0.7)"}>
+    <StackLayout borderRadius backgroundColor={theme.colors.cardPrimary}>
       <ContentCardHeadline>{data.headline}</ContentCardHeadline>
       <Text align="center">{data.content}</Text>
       {data.gallery ? (

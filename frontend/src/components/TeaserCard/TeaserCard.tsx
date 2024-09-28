@@ -15,7 +15,7 @@ const TeaserCard: React.FC<ITeaserCardProps> = ({
 
     return (
         <StackLayout 
-        backgroundColor={theme.colors.teaserPrimary}
+        backgroundColor={theme.colors.cardPrimary}
         borderRadius
         onClick={handleClick}
         >
