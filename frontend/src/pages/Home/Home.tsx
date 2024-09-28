@@ -13,11 +13,8 @@ import ContentCard from "../../components/ContentCard/ContentCard";
 import { IContentCardModel } from "../../dataLayer/models/Card/ContentCard";
 
 export const Home: React.FC<IHomeProps> = () => {
-  const { contentStore, imageStore } = useRootStore();
+  const { contentStore } = useRootStore();
 
-  const images = imageStore.getAllImages();
-  console.log(images);
-  
 
   return (
     <StackLayout backgroundColor={theme.colors.backgroundRich}>

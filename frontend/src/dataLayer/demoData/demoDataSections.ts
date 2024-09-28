@@ -72,8 +72,7 @@ export const newCards = [
       target: "/about/technologies",
       headline: "Technologies",
       content: "Um flexibel und präzise auf Ihre Anforderungen eingehen zu können, setzen ich auf eine breite Palette moderner Technologien:",
-      images: ["1", "2", "3"],
-      
+      gallery: 'techStack',      
     }
   ]
 
