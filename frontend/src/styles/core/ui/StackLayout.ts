@@ -7,6 +7,7 @@ export const StackLayout = styled(Wrapper)`
   id: ${(props) => props.id};
   display: flex;
   gap: 1rem;
+  flex-wrap: ${(props) => (props.wrap ? "wrap" : props.wrap)};
   width: ${(props) => props.width || "100%"};
   margin: ${(props) => props.margin || "0"};
   margin-top: ${(props) => props.marginTop || "0"};
@@ -18,8 +19,8 @@ export const StackLayout = styled(Wrapper)`
   background-color: ${(props) => props.backgroundColor};
   border-radius: ${(props) => props.borderRadius === true ? '10px' : props.borderRadius};
 
-  @media (min-width: ${device.xs}) {
+  /* @media (min-width: ${device.xs}) {
     flex-direction: column;
     flex-wrap: wrap;
-  }
+  } */
 `;
