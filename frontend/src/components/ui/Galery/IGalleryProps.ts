@@ -1,3 +1,5 @@
+import { IGalleryModel } from "../../../dataLayer/models/ui/GalleryModel";
+
 export interface IGalleryProps {
-    images: string[];
+    galleryData: IGalleryModel;
 }
