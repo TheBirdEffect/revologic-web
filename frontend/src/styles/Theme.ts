@@ -27,6 +27,9 @@ export const theme: DefaultTheme = {
 
     // Button
     buttonPrimary: "#8FD1C4",
+
+    // Header/Footer
+    headerFooterBg: "#F8F8F8"
   },
   fonts: {
     anekMalayalam: "Anek Malayalam",
