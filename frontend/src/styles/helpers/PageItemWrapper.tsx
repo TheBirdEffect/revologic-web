@@ -4,6 +4,9 @@ interface PageItemWrapperProps {
   id?: string;
   className?: string;
   width?: string;
+  width100?: boolean;
+  height?: string;
+  height100?: boolean;
   display?: string;
   flexDirection?: 'column' | 'row';
   justifyContent?: string;
@@ -13,11 +16,14 @@ interface PageItemWrapperProps {
   marginTop?: string;
   marginBottom?: string;
   padding?: string;
+  noPadding?: boolean;
   backgroundColor?: string;
   children?: ReactNode;
   borderRadius?: string | boolean;
   onClick?: () => void;
   wrap?: string | boolean;
+  noGap?: boolean;
+  hasShadow?: boolean;
 }
 
 export const PageItemWrapper: React.FC<PageItemWrapperProps> = (

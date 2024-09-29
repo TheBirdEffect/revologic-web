@@ -17,5 +17,7 @@ export const Button = styled.button`
 `
 
 export const TextButton = styled.button`
+    color: ${theme.colors.secondaryTextColor};
+    font-weight: 600;
     background-color: transparent;
 `
