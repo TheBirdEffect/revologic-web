@@ -18,7 +18,9 @@ export const SectionCard: React.FC<ISectionCardProps> = ({
     <StackLayout 
     backgroundColor={"rgb(248, 248, 248, 0.7)"} //TODO: add this color to theme standard colors
     borderRadius
-    marginTop="50px"
+    marginTop="25px"
+    marginBottom="25px"
+    width100
     >
       <SectionHeadlineWrapper>
         <Overline>{data.headline}</Overline>

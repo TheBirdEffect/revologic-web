@@ -17,6 +17,7 @@ const TeaserCard: React.FC<ITeaserCardProps> = ({
         <StackLayout 
         backgroundColor={theme.colors.cardPrimary}
         borderRadius
+        width100
         onClick={handleClick}
         >
             {data.isRoundImage ? (

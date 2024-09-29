@@ -9,7 +9,7 @@ import { theme } from "../../styles/Theme";
 export const ContentCard: React.FC<IContentCardProps> = ({ data }) => {
 
   return (
-    <StackLayout borderRadius backgroundColor={theme.colors.cardPrimary}>
+    <StackLayout borderRadius width100 backgroundColor={theme.colors.cardPrimary}>
       <ContentCardHeadline>{data.headline}</ContentCardHeadline>
       <Text align="center">{data.content}</Text>
       {data.gallery ? (
