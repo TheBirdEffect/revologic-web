@@ -15,3 +15,7 @@ export const Button = styled.button`
     }
 
 `
+
+export const TextButton = styled.button`
+    background-color: transparent;
+`
