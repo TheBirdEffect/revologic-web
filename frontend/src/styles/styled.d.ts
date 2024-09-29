@@ -35,6 +35,8 @@ declare module 'styled-components' {
 
       // Header/Footer
       headerFooterBg: "#F8F8F8"
+      boxShadow: "0 -6px 6px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
+
 
     }
     sizes: {
