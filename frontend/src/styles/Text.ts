@@ -7,4 +7,5 @@ export const Text = styled(CustomText)`
   font-weight: ${(props) =>
     props.bold ? "700" : props.weight ? props.weight : "400"};
   text-align: ${(props) => props.align};
+  line-height: ${(props) => props.lineHeight || "1.5"};
 `;

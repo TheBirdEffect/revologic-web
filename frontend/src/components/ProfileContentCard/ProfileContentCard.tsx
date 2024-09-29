@@ -15,7 +15,13 @@ export const ProfileContentCard: React.FC<IProfileContentCardProps> = ({
 
   
   return (
-    <StackLayout backgroundColor={theme.colors.cardPrimary} borderRadius width100 onClick={handleClick}>
+    <StackLayout 
+    backgroundColor={theme.colors.cardPrimary}
+    borderRadius 
+    width100
+    paddingTop="20px"
+    paddingBottom="30px" 
+    onClick={handleClick}>
       <ProfileImage src={data.profileImg} alt={data.imgAlt} />
       <StackLayout id="Header">
         <Text bold>{data.name}</Text>

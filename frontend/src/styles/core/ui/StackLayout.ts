@@ -11,10 +11,17 @@ export const StackLayout = styled(Wrapper)`
   flex-wrap: ${(props) => (props.wrap ? "wrap" : props.wrap)};
   width: ${(props) => props.width? props.width : props.width100 ? "100%" : "auto"};
   height: ${(props) => props.height? props.height : props.height100 ? "100%" : "auto"};
-  margin: ${(props) => props.margin || "0"};
-  margin-top: ${(props) => props.marginTop || "0"};
-  margin-bottom: ${(props) => props.marginBottom || "0"};
-  padding: ${(props) => props.padding || props.noPadding? 0 : "10px"};
+  margin: ${(props) => props.margin};
+  margin-top: ${(props) => props.marginTop};
+  margin-bottom: ${(props) => props.marginBottom};
+  padding: ${(props) => {
+    if (props.padding) return props.padding;
+    if (props.noPadding) return 0;
+    if (props.paddingTopBottom) return `${props.paddingTopBottom} 0 ${props.paddingTopBottom} 0`;
+    return "10px";
+  }};
+  padding-top: ${(props) => props.paddingTop || "0"};
+  padding-bottom: ${(props) => props.paddingBottom || "0"};
   align-items: ${(props) => props.alignItems || "center"};
   justify-content: ${(props) => props.justifyContent || "center"};
   flex-direction: ${(props) => props.flexDirection || "column"};

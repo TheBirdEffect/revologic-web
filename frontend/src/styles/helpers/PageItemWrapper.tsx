@@ -16,6 +16,9 @@ interface PageItemWrapperProps {
   marginTop?: string;
   marginBottom?: string;
   padding?: string;
+  paddingTop?: string;
+  paddingBottom?: string;
+  paddingTopBottom?: string;
   noPadding?: boolean;
   backgroundColor?: string;
   children?: ReactNode;

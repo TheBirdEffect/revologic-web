@@ -7,15 +7,19 @@ import Gallery from "../ui/Galery/Gallery";
 import { theme } from "../../styles/Theme";
 
 export const ContentCard: React.FC<IContentCardProps> = ({ data }) => {
-
   return (
-    <StackLayout borderRadius width100 backgroundColor={theme.colors.cardPrimary}>
+    <StackLayout
+      borderRadius
+      width100
+      backgroundColor={theme.colors.cardPrimary}
+      paddingTop="40px"
+      paddingBottom="40px"
+      >
       <ContentCardHeadline>{data.headline}</ContentCardHeadline>
-      <Text align="center">{data.content}</Text>
-      {data.gallery ? (
-        <Gallery galleryData={data.gallery} />
-      ) : null
-      }
+      <StackLayout width="90%">
+        <Text align="center">{data.content}</Text>
+      </StackLayout>
+      {data.gallery ? <Gallery galleryData={data.gallery} /> : null}
     </StackLayout>
   );
 };

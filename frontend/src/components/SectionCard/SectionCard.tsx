@@ -20,6 +20,8 @@ export const SectionCard: React.FC<ISectionCardProps> = ({
     borderRadius
     marginTop="25px"
     marginBottom="25px"
+    paddingTop="-50px"
+    paddingBottom="20px"
     width100
     >
       <SectionHeadlineWrapper>

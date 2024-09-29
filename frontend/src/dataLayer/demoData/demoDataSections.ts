@@ -16,7 +16,7 @@ export const newDemo = {
       id: "about",
       headline: "About",
       readMoreLink: "/about",
-      cards: ["5" , "6"],
+      cards: ["5" , "6", "7"],
     },
   ],
 }
@@ -73,6 +73,13 @@ export const newCards = [
       headline: "Technologies",
       content: "Um flexibel und präzise auf Ihre Anforderungen eingehen zu können, setzen ich auf eine breite Palette moderner Technologien:",
       gallery: 'techStack',      
+    },
+    {
+      type: 'ContentCard',
+      id: "7",
+      target: "/about/teaser",
+      headline: "Ein persönlicher Ansatz",
+      content: "Jeder Kunde und jedes Projekt ist einzigartig. Deshalb lege ich großen Wert darauf, eine vertrauensvolle und offene Kommunikation zu pflegen. Bei mir sind Sie nicht nur eine Nummer, sondern ein geschätzter Partner. Gemeinsam entwickeln wir Lösungen, die genau auf Ihre Bedürfnisse zugeschnitten sind – funktional, benutzerfreundlich und zukunftssicher. Ich freue mich darauf, gemeinsam mit Ihnen Ihre Softwareträume zu verwirklichen. Lassen Sie uns die digitale Zukunft gestalten und innovative Lösungen schaffen, die Ihr Unternehmen voranbringen. Treten Sie mit mir in Kontakt und starten Sie noch heute Ihr nächstes großes Projekt.",
     }
   ]
 

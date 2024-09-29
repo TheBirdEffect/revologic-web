@@ -19,6 +19,8 @@ const TeaserCard: React.FC<ITeaserCardProps> = ({
         borderRadius
         width100
         onClick={handleClick}
+        paddingTop="10px"
+        paddingBottom="20px"
         >
             {data.isRoundImage ? (
                 <RoundImage src={data.descriptionImg} alt={data.imgAlt}/>

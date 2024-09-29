@@ -8,6 +8,7 @@ interface ITextProps {
     className?: string;
     align?: "left" | "right" | "center";
     children?: React.ReactNode;
+    lineHeight?: string;
 }
 
 export const CustomText: React.FC<ITextProps> = ({className, children}) => {
