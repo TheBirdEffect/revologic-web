@@ -26,7 +26,7 @@ export const StackLayout = styled(Wrapper)`
   justify-content: ${(props) => props.justifyContent || "center"};
   flex-direction: ${(props) => props.flexDirection || "column"};
   background-color: ${(props) => props.backgroundColor};
-  box-shadow: ${(props) => props.hasShadow ? theme.colors.boxShadow : "none"};
+  box-shadow: ${(props) => props.hasShadow === "up" ? theme.colors.boxShadowUp : props.hasShadow === "down" ? theme.colors.boxShadowDown : "none"};
   border-radius: ${(props) => props.borderRadius === true ? '10px' : props.borderRadius};
 
   /* @media (min-width: ${device.xs}) {
