@@ -15,19 +15,19 @@ export const SectionCard: React.FC<ISectionCardProps> = ({
   }, []);
 
   return (
-    <StackLayout 
-    backgroundColor={"rgb(248, 248, 248, 0.7)"} //TODO: add this color to theme standard colors
-    borderRadius
-    marginTop="25px"
-    marginBottom="25px"
-    paddingTop="-50px"
-    paddingBottom="20px"
-    width100
+    <StackLayout
+      backgroundColor={"rgb(248, 248, 248, 0.7)"} //TODO: add this color to theme standard colors
+      borderRadius
+      marginTop="25px"
+      marginBottom="25px"
+      paddingTop="-50px"
+      paddingBottom="20px"
+      width100
     >
       <SectionHeadlineWrapper>
         <Overline>{data.headline}</Overline>
       </SectionHeadlineWrapper>
-      {children}
+      <StackLayout wrap flexDirection="row" width100>{children}</StackLayout>
       <Button role="button" onClick={handleReadMore}>
         Read More
       </Button>
