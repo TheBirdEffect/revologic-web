@@ -26,7 +26,7 @@ interface PageItemWrapperProps {
   onClick?: () => void;
   wrap?: string | boolean;
   noGap?: boolean;
-  hasShadow?: boolean;
+  hasShadow?: "up" | "down";
 }
 
 export const PageItemWrapper: React.FC<PageItemWrapperProps> = (
