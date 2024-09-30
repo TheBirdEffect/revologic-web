@@ -12,6 +12,7 @@ interface PageItemWrapperProps {
   justifyContent?: string;
   alignItems?: string;
   maxWidth?: string;
+  minWidth?: string;
   margin?: string;
   marginTop?: string;
   marginBottom?: string;

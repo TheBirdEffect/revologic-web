@@ -28,6 +28,8 @@ export const StackLayout = styled(Wrapper)`
   background-color: ${(props) => props.backgroundColor};
   box-shadow: ${(props) => props.hasShadow === "up" ? theme.colors.boxShadowUp : props.hasShadow === "down" ? theme.colors.boxShadowDown : "none"};
   border-radius: ${(props) => props.borderRadius === true ? '10px' : props.borderRadius};
+  max-width: ${(props) => props.maxWidth || "100%"};
+  min-width: ${(props) => props.minWidth};
 
   /* @media (min-width: ${device.xs}) {
     flex-direction: column;
