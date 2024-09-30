@@ -1,21 +1,12 @@
 import { observer } from "mobx-react-lite";
 import React, { useCallback, useMemo } from "react";
 import { StackLayout } from "../../../styles/core/ui/StackLayout";
-import { CorpLogo, MenuIcon } from "../../../styles/core/Image";
+import { CorpLogo } from "../../../styles/core/Image";
 import { useRootStore } from "../../../context/RootStoreContext";
 import { theme } from "../../../styles/Theme";
 import { LanguageButton } from "../../../styles/core/Button";
-// import {
-//   Home,
-//   CloudDone,
-//   RocketLaunch,
-//   SupportAgent,
-//   AccountCircle,
-//   VerifiedUser,
-//   Assignment,
-// } from "@mui/icons-material";
-
 import { Button } from "@mui/material";
+import MenuRounded from "@mui/icons-material/MenuRounded";
 import Drawer from "../Drawer/Drawer";
 
 export const Header: React.FC = () => {
@@ -24,7 +15,6 @@ export const Header: React.FC = () => {
 
   const { imageStore } = useRootStore();
   const corpLogo = imageStore.getImageById("CorpLogoMobile");
-  const burgerIcon = imageStore.getImageById("BurgerIcon");
   const screen = window.screen.height;
 
   const handleLanguageChange = useMemo(() => {
@@ -33,7 +23,7 @@ export const Header: React.FC = () => {
     };
   }, [language]);
 
-  const toggleDrawer = useCallback( (props: boolean) => {
+  const toggleDrawer = useCallback((props: boolean) => {
     setDrawerOpen(props);
   }, []);
 
@@ -56,7 +46,7 @@ export const Header: React.FC = () => {
           {language}
         </LanguageButton>
         <Button onClick={() => toggleDrawer(!drawerOpen)}>
-          <MenuIcon src={burgerIcon?.url} alt={burgerIcon?.alt} />
+          <MenuRounded sx={{ width: 45, height: 45, color: "black" }} />
         </Button>
         <Drawer drawerOpen={drawerOpen} toggleDrawer={toggleDrawer} />
       </StackLayout>
