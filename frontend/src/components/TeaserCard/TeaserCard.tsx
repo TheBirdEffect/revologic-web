@@ -21,6 +21,7 @@ const TeaserCard: React.FC<ITeaserCardProps> = ({
         onClick={handleClick}
         paddingTop="10px"
         paddingBottom="20px"
+        //Flex must be set in any way
         minWidth="260px"
         maxWidth="500px"
         >
