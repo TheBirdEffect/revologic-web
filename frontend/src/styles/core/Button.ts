@@ -21,3 +21,13 @@ export const TextButton = styled.button`
     font-weight: 600;
     background-color: transparent;
 `
+
+export const LanguageButton = styled.button`
+    color: ${theme.colors.secondaryTextColor};
+    font-weight: 600;
+    background-color: transparent;
+    border: 2px solid ${theme.colors.secondaryTextColor};
+    cursor: pointer;
+    border-radius: 20px;
+    padding: 6px 12px;
+`

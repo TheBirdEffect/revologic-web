@@ -33,3 +33,13 @@ export const GalleryImage = styled(CustomImage)`
     width: 110px;
     height: auto;
 `
+
+export const CorpLogo = styled(CustomImage)`
+    width: 80%;
+    height: auto;
+`
+
+export const MenuIcon = styled(CustomImage)`
+    width: 30px;
+    height: 30px;
+`
