@@ -8,7 +8,7 @@ export const Button = styled.button`
     box-shadow: 4px 4px 4px rgba(0, 0, 0, 0.25);
     border-radius: 10px;
     
-    @media ${device.xs} {
+    @media ${device.sm} {
         width: 220px !important;
         height: 55px !important;
         margin: 10px !important;
