@@ -1,4 +1,7 @@
 import { DefaultTheme } from "styled-components";
+import '@fontsource-variable/inter'
+import '@fontsource/roboto/400.css';
+import '@fontsource/roboto/700.css';
 
 export const theme: DefaultTheme = {
   colors: {
@@ -34,7 +37,7 @@ export const theme: DefaultTheme = {
     boxShadowDown: "0px 7px 7px 0px rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19)",
   },
   fonts: {
-    // anekMalayalam: "Anek Malayalam",
+    inter: "Inter Variable",
     roboto: "Roboto",
   },
   sizes: {

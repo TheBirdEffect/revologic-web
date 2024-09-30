@@ -44,7 +44,7 @@ declare module 'styled-components' {
       xs: '10px'
     }
     fonts: {
-      // anekMalayalam: 'Anek Malayalam'
+      inter: 'Inter Variable',
       roboto: 'Roboto'
     }
     paddings: {
