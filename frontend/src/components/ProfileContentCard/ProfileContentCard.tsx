@@ -23,17 +23,17 @@ export const ProfileContentCard: React.FC<IProfileContentCardProps> = ({
     paddingBottom="30px" 
     onClick={handleClick}>
       <ProfileImage src={data.profileImg} alt={data.imgAlt} />
-      <StackLayout id="Header">
+      <StackLayout id="Header" noGap>
         <Text bold>{data.name}</Text>
         <Text>{data.degree}</Text>
       </StackLayout>
-      <StackLayout id="Middle">
+      <StackLayout id="Middle" noGap>
         <Text bold>{data.position}</Text>
         {data.offers !== undefined ? data.offers.map((offer, index) => (
           <Text key={index}>{offer}</Text>
         )): null}
       </StackLayout>
-      <StackLayout id="Footer">
+      <StackLayout id="Footer" noGap>
         <Text bold>Interests</Text>
         {data.interests !== undefined ? data.interests.map((interest, index) => (
           <Text key={index}>{interest}</Text>
