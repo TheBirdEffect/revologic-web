@@ -1,8 +1,9 @@
 import React, { useCallback } from "react";
 import { IFooterProps } from "./IFooterProps";
-import { StackLayout } from "../../styles/core/ui/StackLayout";
-import { TextButton } from "../../styles/core/Button";
-import { theme } from "../../styles/Theme";
+import { StackLayout } from "../../../styles/core/ui/StackLayout";
+import { TextButton } from "../../../styles/core/Button";
+import { theme } from "../../../styles/Theme";
+import { observer } from "mobx-react-lite";
 
 export const Footer: React.FC<IFooterProps> = () => {
   const handlePrivacyClick = useCallback(() => {
@@ -22,7 +23,7 @@ export const Footer: React.FC<IFooterProps> = () => {
       alignItems="center"
       flexDirection="row"
       backgroundColor={theme.colors.headerFooterBg}
-      hasShadow
+      hasShadow="up"
     >
       <TextButton onClick={handlePrivacyClick}>Privacy</TextButton>
       <StackLayout
@@ -38,3 +39,5 @@ export const Footer: React.FC<IFooterProps> = () => {
     </>
   );
 };
+
+export default observer(Footer);
