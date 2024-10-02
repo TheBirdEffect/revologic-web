@@ -1,1 +1,3 @@
-export interface IRouterProps {}
+export interface IRouterProps {
+    children: React.ReactNode;
+}
