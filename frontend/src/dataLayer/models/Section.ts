@@ -1,12 +1,13 @@
 import { Instance, t } from 'mobx-state-tree';
-import { UnionCard } from '../types/UnionCard';
+import { ProfileContentCardModel } from './Card/ProfileContentCard';
+import { TeaserCardModel } from './Card/TeaserCard';
+import { ContentCardModel } from './Card/ContentCard';
 
 export const Section = t.model({
     id: t.identifier,
     headline: t.string,
     readMoreLink: t.maybeNull(t.string),
-    cards: t.array(UnionCard)
+    cards: t.array(t.reference(t.union(TeaserCardModel, ProfileContentCardModel, ContentCardModel))),
 });
 
-// eslint-disable-next-line @typescript-eslint/no-empty-object-type
-export interface ISectionStore extends Instance<typeof Section> { };
+export type ISectionModel = Instance<typeof Section>;

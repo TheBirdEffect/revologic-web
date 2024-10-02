@@ -1,4 +1,4 @@
-import { StackLayout } from "../../styles/core/Wrappers";
+import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { IProjectsProps } from "./IProjectsProps";
 
 export const Projects: React.FC<IProjectsProps> = () => {

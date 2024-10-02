@@ -1,4 +1,4 @@
-import { StackLayout } from "../../styles/core/Wrappers";
+import { StackLayout } from "../../styles/core/ui/StackLayout";
 import { IContactProps } from "./IContactProps";
 
 export const Contact: React.FC<IContactProps> = () => {

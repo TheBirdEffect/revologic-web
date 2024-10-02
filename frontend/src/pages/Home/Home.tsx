@@ -1,30 +1,41 @@
+import { observer } from "mobx-react-lite";
+import SectionCard from "../../components/SectionCard/SectionCard";
+import TeaserCard from "../../components/TeaserCard/TeaserCard";
 import { useRootStore } from "../../context/RootStoreContext";
-import { StackLayout } from "../../styles/core/Wrappers";
+import { ITeaserCardModel } from "../../dataLayer/models/Card/TeaserCard";
+import { StackLayout } from "../../styles/core/ui/StackLayout";
+import { theme } from "../../styles/Theme";
 import { IHomeProps } from "./IHomeProps";
+import { ISectionModel } from "../../dataLayer/models/Section";
+import { ProfileContentCard } from "../../components/ProfileContentCard/ProfileContentCard";
+import { IProfileContentCardModel } from "../../dataLayer/models/Card/ProfileContentCard";
+import ContentCard from "../../components/ContentCard/ContentCard";
+import { IContentCardModel } from "../../dataLayer/models/Card/ContentCard";
 
 export const Home: React.FC<IHomeProps> = () => {
   const { contentStore } = useRootStore();
 
-  const head = contentStore.getSection("services")?.headline;
-
-  console.log(head);
 
   return (
-    <StackLayout>
-      <h1>Home</h1>
+    <StackLayout backgroundColor={theme.colors.backgroundRich}>
       {contentStore.sections.map((section) => (
-        <StackLayout key={section.id}>
-          <h2>{section.headline}</h2>
-          {section.cards.map((card) => (
-            <StackLayout key={card.id}>
-              <h3>{card.headline}</h3>
-              { card.type === "Card" && 
-                <img src={card.descriptionImg} alt={card.headline} />
-              }
-            </StackLayout>
-          ))}
-        </StackLayout>
+        <SectionCard key={section.id} data={section as ISectionModel}>
+          {section.cards.map((card) =>
+            card.isTeaserCard() ? (
+              <TeaserCard data={card as ITeaserCardModel} key={card.id} />
+            ) : card.isProfileContentCard() ? (
+              <ProfileContentCard
+                data={card as IProfileContentCardModel}
+                key={card.id}
+              />
+            ) : card.isContentCard() ? (
+              <ContentCard data={card as IContentCardModel} key={card.id} />
+            ) : null
+          )}
+        </SectionCard>
       ))}
     </StackLayout>
   );
 };
+
+export default observer(Home);

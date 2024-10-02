@@ -1,14 +1,17 @@
 import { t } from "mobx-state-tree";
-import { Card } from "../models/Card";
-import { ContentCard } from "../models/ContentCard";
+import { TeaserCard } from "../models/Card/TeaserCard";
+import { ContentCard } from "../models/Card/ContentCard";
+import { ProfileContentCard } from "../models/Card/ProfileContentCard";
 
 export const UnionCard = t.union({
     dispatcher: (snapshot) => {
-        if (snapshot.type === 'Card') {
-            return Card;
+        if (snapshot.type === 'TeaserCard') {
+            return TeaserCard;
+        } else if (snapshot.type === 'ProfileContentCard') {
+            return ProfileContentCard;
         } else {
             return ContentCard;
         }
     }
-}, Card, ContentCard
+}, TeaserCard, ContentCard
 );

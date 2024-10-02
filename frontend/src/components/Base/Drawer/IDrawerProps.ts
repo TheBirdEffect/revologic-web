@@ -1,0 +1,1 @@
+export interface IDrawerProps { toggleDrawer: (props: boolean) => void; drawerOpen: boolean; };
