@@ -16,4 +16,6 @@ export const Router: React.FC<IRouterProps> = ({children}) => {
     );
 }
 
+// TODO: Turn routing system like this: https://stackoverflow.com/questions/40541994/multiple-path-names-for-a-same-component-in-react-router
+
 export default observer(Router);
