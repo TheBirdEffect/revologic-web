@@ -4,6 +4,8 @@ import Home from "../../pages/Home/Home";
 import { Services } from "../../pages/Services/Services";
 import { Projects } from "../../pages/Projects/Projects";
 import { Contact } from "../../pages/Contact/Contact";
+import { useCallback } from 'react';
+import { RouteObject } from 'react-router-dom';
 
 interface RouteConfig {
     path: string | string[];
@@ -33,16 +35,17 @@ const routes: RouteConfig[] = [
     }
 ]
 
-const pathResolver = () => {
-    let pathList: string[] = [];
+const resolvePaths = () => {
+    let pathList: RouteObject[] = [];
     routes.forEach(route => {
         if (Array.isArray(route.path)) {
-            pathList = pathList.concat(route.path);
+            pathList = pathList.concat(route.path.map(path => ({ path, element: route.element })));
         } else {
-            pathList.push(route.path);
+            pathList.push({ path: route.path, element: route.element });
         }
     });
     return pathList;
-}
+};
 
-export default pathResolver;
+
+export default resolvePaths; // Adjust the export as necessary;
