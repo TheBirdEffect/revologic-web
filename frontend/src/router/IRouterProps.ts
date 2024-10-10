@@ -1,3 +1,3 @@
 export interface IRouterProps {
-    children: React.ReactNode;
+    children?: React.ReactNode;
 }

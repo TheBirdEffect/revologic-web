@@ -1,7 +1,7 @@
 import { ReactElement } from "react";
 
-export interface RouteObject {
+export interface RoutConfig {
     path: string | string[];
     element: ReactElement;
-    children?: RouteObject[];
+    children?: RoutConfig[];
 }
