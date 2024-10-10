@@ -22,6 +22,7 @@ import {
   SwipeableDrawer,
 } from "@mui/material";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const CustomDrawer = styled(SwipeableDrawer)`
   .MuiDrawer-paper {
@@ -29,8 +30,13 @@ const CustomDrawer = styled(SwipeableDrawer)`
   }
 `;
 
-export const Drawer: React.FC<IDrawerProps> = ( props ) => {
+export const Drawer: React.FC<IDrawerProps> = (props) => {
   const iconColor = theme.colors.backgroundRich;
+  const navigate = useNavigate();
+
+  const handleNavigation = (path: string) => {
+    navigate(`/${path.toLowerCase()}`);
+  }
 
   const NavItemList = () => (
     <Box
@@ -42,7 +48,7 @@ export const Drawer: React.FC<IDrawerProps> = ( props ) => {
       <List>
         {["Home", "Services", "Projects"].map((text) => (
           <ListItem key={text} disablePadding>
-            <ListItemButton>
+            <ListItemButton onClick={() => handleNavigation(text)}>
               <ListItemIcon>
                 {text === "Home" ? (
                   <Home sx={{ color: iconColor }} />
@@ -96,13 +102,13 @@ export const Drawer: React.FC<IDrawerProps> = ( props ) => {
 
   return (
     <CustomDrawer
-    anchor="right"
-    open={props.drawerOpen}
-    onClose={() => props.toggleDrawer(false)}
-    onOpen={() => props.toggleDrawer(true)}
-  >
-    <NavItemList />
-  </CustomDrawer>
+      anchor="right"
+      open={props.drawerOpen}
+      onClose={() => props.toggleDrawer(false)}
+      onOpen={() => props.toggleDrawer(true)}
+    >
+      <NavItemList />
+    </CustomDrawer>
   );
 };
 

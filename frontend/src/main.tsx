@@ -7,8 +7,6 @@ import { RootStore } from "./dataLayer/stores/RootStore.ts";
 import { newCards, newDemo } from "./dataLayer/demoData/demoDataSections.ts";
 import { demoImages } from "./dataLayer/demoData/images.ts";
 import { demoImageGalleries } from "./dataLayer/demoData/imageGallery.ts";
-import { Footer } from "./components/Base/Footer/Footer.tsx";
-import Header from "./components/Base/Header/Header.tsx";
 
 const useContext = RootStore.create({
   contentStore: {
@@ -24,9 +22,7 @@ const useContext = RootStore.create({
 createRoot(document.getElementById("root")!).render(
   <StrictMode>
     <RootStoreProvider value={useContext}>
-      <Header />
       <App />
-      <Footer />
     </RootStoreProvider>
   </StrictMode>
 );
