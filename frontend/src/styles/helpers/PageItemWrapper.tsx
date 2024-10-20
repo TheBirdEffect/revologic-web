@@ -28,6 +28,7 @@ interface PageItemWrapperProps {
   wrap?: string | boolean;
   noGap?: boolean;
   hasShadow?: "up" | "down";
+  boxShadow?: string;
 }
 
 export const PageItemWrapper: React.FC<PageItemWrapperProps> = (
