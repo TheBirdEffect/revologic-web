@@ -5,14 +5,21 @@ import { Button } from "../../styles/core/Button";
 import { Overline } from "../../styles/core/Headings";
 import { SectionHeadlineWrapper } from "../../styles/core/ui/TextLayout";
 import { observer } from "mobx-react-lite";
+import { useNavigate } from "react-router-dom";
 
 export const SectionCard: React.FC<ISectionCardProps> = ({
   data,
   children,
+  noOverline,
+  noReadMoreButton,
 }) => {
+  const navigate = useNavigate();
+
   const handleReadMore = useCallback(() => {
-    console.log(data.readMoreLink + "Clicked");
-  }, []);
+    if (data.readMoreLink) {
+      navigate(data.readMoreLink);
+    }
+  }, [data.readMoreLink, navigate]);
 
   return (
     <StackLayout
@@ -25,14 +32,14 @@ export const SectionCard: React.FC<ISectionCardProps> = ({
       width100
     >
       <SectionHeadlineWrapper>
-        { data.headline ? (
-        <Overline>{data.headline}</Overline>
-        ) : null }
+        { noOverline ? null : <Overline>{data.headline}</Overline> }
       </SectionHeadlineWrapper>
-      <StackLayout wrap flexDirection="row" width100>{children}</StackLayout>
-      <Button role="button" onClick={handleReadMore}>
-        Read More
-      </Button>
+      <StackLayout wrap flexDirection="row">{children}</StackLayout>
+      {noReadMoreButton ? null : (
+        <Button role="button" onClick={handleReadMore}>
+          Read More
+        </Button>
+      )}
     </StackLayout>
   );
 };
