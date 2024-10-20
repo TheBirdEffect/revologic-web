@@ -24,6 +24,7 @@ export const Footer: React.FC<IFooterProps> = () => {
       flexDirection="row"
       backgroundColor={theme.colors.headerFooterBg}
       hasShadow="up"
+      marginTop="20px"
     >
       <TextButton onClick={handlePrivacyClick}>Privacy</TextButton>
       <StackLayout
