@@ -21,7 +21,9 @@ export const ProfileContentCard: React.FC<IProfileContentCardProps> = ({
     width100
     paddingTop="20px"
     paddingBottom="30px" 
-    onClick={handleClick}>
+    onClick={handleClick}
+    boxShadow="4px 4px 4px rgba(0,0,0,0.20)"
+    >
       <ProfileImage src={data.profileImg} alt={data.imgAlt} />
       <StackLayout id="Header" noGap>
         <Text bold>{data.name}</Text>

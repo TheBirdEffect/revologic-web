@@ -14,6 +14,7 @@ export const ContentCard: React.FC<IContentCardProps> = ({ data }) => {
       backgroundColor={theme.colors.cardPrimary}
       paddingTop="40px"
       paddingBottom="40px"
+      boxShadow="4px 4px 4px rgba(0,0,0,0.20)"
       >
       <ContentCardHeadline>{data.headline}</ContentCardHeadline>
       <StackLayout width="90%">

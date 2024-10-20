@@ -6,39 +6,35 @@ import { theme } from "../../styles/Theme";
 import { CardDescriptor, CardHeadLine } from "../../styles/core/Headings";
 import { useCallback } from "react";
 
-const TeaserCard: React.FC<ITeaserCardProps> = ({
-    data
-}) => {
-    const handleClick = useCallback(() => {
-        console.log(data.target);
-    }, []);
+const TeaserCard: React.FC<ITeaserCardProps> = ({ data }) => {
+  const handleClick = useCallback(() => {
+    console.log(data.target);
+  }, []);
 
-    return (
-        <StackLayout 
-        backgroundColor={theme.colors.cardPrimary}
-        borderRadius
-        width100
-        onClick={handleClick}
-        paddingTop="10px"
-        paddingBottom="20px"
-        //Flex must be set in any way
-        minWidth="260px"
-        maxWidth="500px"
-        >
-            {data.isRoundImage ? (
-                <RoundImage src={data.descriptionImg} alt={data.imgAlt}/>
-            ) : (
-                <Image src={data.descriptionImg} alt={data.headline}/>
-            )}
-            <StackLayout id="Footer">
-            <CardHeadLine>{data.headline}</CardHeadLine>
-            {data.descriptor && 
-            <CardDescriptor>{data.descriptor}</CardDescriptor>
-            }
-            </StackLayout>
-        </StackLayout>
-    );
-
+  return (
+    <StackLayout
+      backgroundColor={theme.colors.cardPrimary}
+      borderRadius
+      width100
+      onClick={handleClick}
+      paddingTop="10px"
+      paddingBottom="20px"
+      //Flex must be set in any way
+      minWidth="260px"
+      maxWidth="500px"
+      boxShadow="4px 4px 4px rgba(0,0,0,0.20)"
+    >
+      {data.isRoundImage ? (
+        <RoundImage src={data.descriptionImg} alt={data.imgAlt} />
+      ) : (
+        <Image src={data.descriptionImg} alt={data.headline} />
+      )}
+      <StackLayout id="Footer">
+        <CardHeadLine>{data.headline}</CardHeadLine>
+        {data.descriptor && <CardDescriptor>{data.descriptor}</CardDescriptor>}
+      </StackLayout>
+    </StackLayout>
+  );
 };
 
-export default observer(TeaserCard) ;
+export default observer(TeaserCard);
