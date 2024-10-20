@@ -7,6 +7,7 @@ interface ImageProps {
     alt?: string;
     className?: string;
     children?: React.ReactNode;
+    hasGradient?: boolean;
 }
 
 export const CustomImage: React.FC<ImageProps> = ({className, src, alt}) => {

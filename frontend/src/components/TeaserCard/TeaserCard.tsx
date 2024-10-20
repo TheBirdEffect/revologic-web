@@ -9,7 +9,7 @@ import { useCallback } from "react";
 const TeaserCard: React.FC<ITeaserCardProps> = ({ data }) => {
   const handleClick = useCallback(() => {
     console.log(data.target);
-  }, []);
+  }, [data.target]);
 
   return (
     <StackLayout
