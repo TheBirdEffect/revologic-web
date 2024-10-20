@@ -25,7 +25,9 @@ export const SectionCard: React.FC<ISectionCardProps> = ({
       width100
     >
       <SectionHeadlineWrapper>
+        { data.headline ? (
         <Overline>{data.headline}</Overline>
+        ) : null }
       </SectionHeadlineWrapper>
       <StackLayout wrap flexDirection="row" width100>{children}</StackLayout>
       <Button role="button" onClick={handleReadMore}>
